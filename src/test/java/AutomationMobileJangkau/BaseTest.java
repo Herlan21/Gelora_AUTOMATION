@@ -16,9 +16,10 @@ public class BaseTest {
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "15.0");
         capabilities.setCapability("deviceName", "emulator-5554");
-        capabilities.setCapability("app", "/Users/herlan/Downloads/app-production-release.apk");
+        capabilities.setCapability("app", "/Users/herlan/Downloads/app-staging-release.apk");
         capabilities.setCapability("automationName", "UiAutomator2");
-        capabilities.setCapability("appPackage", "com.gelora");
+        capabilities.setCapability("appPackage", "com.gelora.staging");
+//        capabilities.setCapability("appPackage", "com.gelora");
         capabilities.setCapability("appActivity", "com.gelora.MainActivity");
 
         driver = new AndroidDriver(capabilities);
@@ -33,6 +34,7 @@ public class BaseTest {
 
     public static void resetApp() {
 //        driver.terminateApp("com.example.jangkau");
-        driver.activateApp("com.example.jangkau");
+        driver.activateApp("com.gelora.staging");
+//        driver.activateApp("com.gelora");
     }
 }

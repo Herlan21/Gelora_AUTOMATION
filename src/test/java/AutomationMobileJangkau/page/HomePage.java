@@ -13,8 +13,6 @@ public class HomePage extends BaseTest {
         this.driver = driver;
     }
 
-    //Locator Home Page
-    By userNameBanner = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tv2']");
     By remainingBalace = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvSaldo']");
     By accountNumber = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvRekening']");
     //transfer feature locator
@@ -28,17 +26,20 @@ public class HomePage extends BaseTest {
     By nextTransferButton = By.xpath("//android.widget.Button[@resource-id='com.example.jangkau:id/btnNext']");
     By confirmTransferButton = By.xpath("//android.widget.Button[@resource-id='com.example.jangkau:id/btnNext']");
     By berandaButton = AppiumBy.accessibilityId("tombol beranda");
+
     //validate transfer
     By checkAccountNameDestination = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvName']");
     By checkAccountNumber = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvRekening']");
     By checkAmountTransfer = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvNominal']");
     By checkTotalAmount = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvTransfer']");
     By checkAccountSource = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvLabelRekening']");
+
     //PIN locator
     By pinNo1 = AppiumBy.accessibilityId("Number 1");
     By pinNo4 = AppiumBy.accessibilityId("Number 4");
     By pinNo2 = AppiumBy.accessibilityId("Number 2");
     By pinNo6 = AppiumBy.accessibilityId("Number 6");
+
     //validate transfer success
     By checkSuccessIcon = AppiumBy.accessibilityId("Ilustrasi Transaksi Berhasil");
     By checkIDTransaction = By.xpath("//android.widget.TextView[@resource-id='com.example.jangkau:id/tvTransactionId']");
@@ -48,8 +49,13 @@ public class HomePage extends BaseTest {
 
 
     //Method Action
+
+
+
+
+
+
     public void validateHomePage(){
-        wait.until(ExpectedConditions.presenceOfElementLocated(userNameBanner));
         wait.until(ExpectedConditions.presenceOfElementLocated(remainingBalace));
         wait.until(ExpectedConditions.presenceOfElementLocated(accountNumber));
     }

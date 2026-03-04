@@ -2,7 +2,7 @@ package AutomationMobileJangkau.StepDefinitions;
 
 import AutomationMobileJangkau.BaseTest;
 import AutomationMobileJangkau.page.HomePage;
-import AutomationMobileJangkau.page.LoginPage;
+import AutomationMobileJangkau.page.VenuePage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -17,11 +17,11 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class HomeSteps extends BaseTest {
     private HomePage homepage;
-    private LoginPage loginpage;
+    private VenuePage loginpage;
 
     @Before
     public void setup(){
-        loginpage = new LoginPage(driver);
+        loginpage = new VenuePage(driver);
         homepage = new HomePage(driver);
     }
 
