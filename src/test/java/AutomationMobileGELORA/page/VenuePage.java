@@ -1,6 +1,6 @@
-package AutomationMobileJangkau.page;
+package AutomationMobileGELORA.page;
 
-import AutomationMobileJangkau.BaseTest;
+import AutomationMobileGELORA.BaseTest;
 import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;

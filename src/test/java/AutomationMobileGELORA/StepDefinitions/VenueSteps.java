@@ -1,10 +1,8 @@
-package AutomationMobileJangkau.StepDefinitions;
+package AutomationMobileGELORA.StepDefinitions;
 
-import AutomationMobileJangkau.BaseTest;
-import AutomationMobileJangkau.page.HomePage;
-import AutomationMobileJangkau.page.VenuePage;
+import AutomationMobileGELORA.BaseTest;
+import AutomationMobileGELORA.page.VenuePage;
 import io.cucumber.java.Before;
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;

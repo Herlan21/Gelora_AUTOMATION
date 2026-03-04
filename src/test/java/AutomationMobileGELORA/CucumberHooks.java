@@ -1,4 +1,4 @@
-package AutomationMobileJangkau;
+package AutomationMobileGELORA;
 
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
