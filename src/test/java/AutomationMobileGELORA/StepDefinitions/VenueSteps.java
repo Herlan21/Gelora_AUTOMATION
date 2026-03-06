@@ -23,15 +23,18 @@ public class VenueSteps extends BaseTest {
     public void userIsLaunchJangkauAppAndGoToLoginPage() {
     }
 
-    @And("user click selanjutnya button")
-    public void userClickSelanjutnyaButton() {
-        venuePage.welcomeScreen();
-        venuePage.welcomeScreen();
+    @And("user click selanjutnya and homepage button")
+    public void userClickSelanjutnyaAndHomepageButton() {
+        venuePage.selanjutnyaButton();
+        venuePage.selanjutnyaButton();
+        venuePage.homepageButton();
+        venuePage.checkBottomSheetLocation();
+        venuePage.hitAllowLocationPermission();
     }
 
     @And("user click search form and then input text with {string} and enter")
-    public void userClickSearchFormAndThenInputTextWithAndEnter(String searhingValue) {
-        venuePage.inputSearchingValue(searhingValue);
+    public void userClickSearchFormAndThenInputTextWithAndEnter(String searchingValue) {
+        venuePage.inputSearchingValue(searchingValue);
     }
 
     @And("user select venue, select date and timetable in the venue")
