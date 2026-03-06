@@ -16,7 +16,7 @@ public class VenuePage extends BaseTest {
     }
 
     //Splashscreen
-    By welcomeScreenButton = AppiumBy.accessibilityId("Selanjutnya, \uE902");
+    By welcomeScreenButtonSelanjutnya = AppiumBy.accessibilityId("Selanjutnya, \uE902");
 
     //Locator Navbar - HomePage
     By navbarVenue = AppiumBy.accessibilityId("Venue");
@@ -25,16 +25,11 @@ public class VenuePage extends BaseTest {
     By seachForm = By.xpath("//android.widget.EditText[@text=\"Cari Venue\"]");
 
    // Locator Venue
-   By selectedVenue = AppiumBy.accessibilityId("Selanjutnya, \uE902");
+   By selectedVenue = AppiumBy.accessibilityId("Selanjutnya, \uE902" );
+   By selectedVenueTime = By.xpath("//android.view.ViewGroup[@content-desc=\"10:00 - 12:00, Rp400.000\"]/android.view.ViewGroup");
 
     //Method action for locator
     // Searching method
-
-//    public void inputSearchingValue(String searchingValue){
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(seachForm)).click();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(seachForm)).sendKeys(searchingValue);
-//    }
-
     public void inputSearchingValue(String searchingValue){
         wait.until(ExpectedConditions.visibilityOfElementLocated(seachForm)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(seachForm)).sendKeys(searchingValue);
@@ -42,12 +37,17 @@ public class VenuePage extends BaseTest {
     }
 
     public void welcomeScreen() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(welcomeScreenButton)).isDisplayed();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeScreenButton)).click();
+        wait.until(ExpectedConditions.presenceOfElementLocated(welcomeScreenButtonSelanjutnya)).isDisplayed();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeScreenButtonSelanjutnya)).click();
     }
 
     public void hitSelectedVenue(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(selectedVenue)).click();
+      wait.until(ExpectedConditions.visibilityOfElementLocated(selectedVenue)).click();
+
+    }
+
+    public void hitButtonTimetable(){
+      wait.until(ExpectedConditions.visibilityOfElementLocated(selectedVenueTime)).click();
     }
 
 //    public String invalidNotification(){

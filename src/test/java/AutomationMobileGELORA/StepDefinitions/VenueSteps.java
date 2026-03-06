@@ -8,9 +8,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 
-import static org.testng.AssertJUnit.assertEquals;
-
-
 public class VenueSteps extends BaseTest {
 
     private VenuePage venuePage;
@@ -29,6 +26,7 @@ public class VenueSteps extends BaseTest {
     @And("user click selanjutnya button")
     public void userClickSelanjutnyaButton() {
         venuePage.welcomeScreen();
+        venuePage.welcomeScreen();
     }
 
     @And("user click search form and then input text with {string} and enter")
@@ -39,7 +37,7 @@ public class VenueSteps extends BaseTest {
     @And("user select venue, select date and timetable in the venue")
     public void userSelectVenueAndDateAndTimetableInTheVenue() {
         venuePage.hitSelectedVenue();
-//      venuePage.hitButtonTimetable();
+        venuePage.hitButtonTimetable();
     }
 
     @When("user hit checkout button")
