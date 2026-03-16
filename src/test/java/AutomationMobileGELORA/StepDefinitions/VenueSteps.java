@@ -11,16 +11,15 @@ import io.cucumber.java.en.Then;
 public class VenueSteps extends BaseTest {
 
     private VenuePage venuePage;
-    // Initialize Driver
+
     @Before
-    public void setup(){
-//        setupDriver();
-        venuePage = new VenuePage(driver);
+    public void setup() {
+        venuePage = new VenuePage();
     }
 
     // Step definitions
-    @Given("user is launch the app")
-    public void userIsLaunchJangkauAppAndGoToLoginPage() {
+    @Given("user is launch Gelora app")
+    public void userIsLaunchGeloraApp() {
     }
 
     @And("user click selanjutnya and homepage button")

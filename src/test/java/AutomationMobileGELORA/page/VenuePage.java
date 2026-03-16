@@ -3,17 +3,10 @@ package AutomationMobileGELORA.page;
 import AutomationMobileGELORA.BaseTest;
 import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class VenuePage extends BaseTest {
-
-    private AndroidDriver driver;
-
-    public VenuePage(AndroidDriver driver) {
-        this.driver = driver;
-    }
 
     //Splashscreen
     By welcomeScreenButtonSelanjutnya = AppiumBy.accessibilityId("Selanjutnya, \uE902");
@@ -57,8 +50,17 @@ public class VenuePage extends BaseTest {
 
     public void inputSearchingValue(String searchingValue){
         wait.until(ExpectedConditions.visibilityOfElementLocated(searchForm)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchForm)).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchForm)).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(searchForm)).sendKeys(searchingValue);
-        driver.executeScript("mobile: performEditorAction", ImmutableMap.of("action", "search"));
+        pressKeyboardAction("go");
+    }
+
+    public void pressKeyboardAction(String action){
+        driver.executeScript(
+                "mobile: performEditorAction",
+                ImmutableMap.of("action", action)
+        );
     }
 
     public void hitSelectedVenue(){
@@ -68,22 +70,6 @@ public class VenuePage extends BaseTest {
     public void hitButtonTimetable(){
       wait.until(ExpectedConditions.visibilityOfElementLocated(selectedVenueTime)).click();
     }
-
-//    public String invalidNotification(){
-//        return wait.until(ExpectedConditions.visibilityOfElementLocated(errorAlert)).getText();
-//    }
-//
-//    public void inputUsername(String username){
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameForm)).sendKeys(username);
-//    }
-//
-//    public void inputPassword(String password){
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordForm)).sendKeys(password);
-//    }
-
-//    public void clickLoginButton(){
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(loginButton)).click();
-//    }
 
 }
 

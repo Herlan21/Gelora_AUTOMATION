@@ -13,15 +13,14 @@ import io.cucumber.java.en.When;
 import java.util.List;
 import java.util.Map;
 
-import static org.testng.AssertJUnit.assertTrue;
 
 public class HomeSteps extends BaseTest {
     private HomePage homepage;
-    private VenuePage loginpage;
+//    private VenuePage loginpage;
 
     @Before
     public void setup(){
-        loginpage = new VenuePage(driver);
+//        loginpage = new VenuePage(driver);
         homepage = new HomePage(driver);
     }
 

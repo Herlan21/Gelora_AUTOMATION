@@ -5,7 +5,6 @@ import io.appium.java_client.remote.AutomationName;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.net.URL;
 import java.net.MalformedURLException;
 import java.time.Duration;
 
@@ -33,15 +32,11 @@ public class BaseTest {
         capabilities.setCapability("appium:noReset", false);
         capabilities.setCapability("appium:fullReset", false);
 
-        // URL Appium server (pastikan portnya benar)
-//        URL url = new URL("http://127.0.0.1:4723");
-
         // Inisialisasi driver
         driver = new AndroidDriver(capabilities);
 
         // WebDriver wait
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
         System.out.println("Driver berhasil diinisialisasi!");
     }
 
